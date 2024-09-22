@@ -31,9 +31,13 @@ img {
     background-color: rgb(252, 255, 54);
     flex: 0 1 100%;
     cursor: pointer;
+    color: rgb(49, 48, 48);
+    font-weight: 700;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .buy_btn:hover {
-    background-color: rgb(208, 211, 42)
+    background-color: rgb(208, 211, 42);
+    color: black;
 }
 .buy_btn2 {
     display: none;

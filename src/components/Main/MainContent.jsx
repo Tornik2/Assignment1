@@ -25,33 +25,40 @@ const data = {
 export function Content() {
   return (
     <main className="main_content no-scrollbar">
-      <div className="products">
-        <Product
-          src={data.hipnosis.src}
-          name={data.hipnosis.name}
-          description={data.hipnosis.description}
-        />
-        <Product
-          src={data.legendborn.src}
-          name={data.legendborn.name}
-          description={data.legendborn.description}
-        />
-        <Product
-          src={data.salim.src}
-          name={data.salim.name}
-          description={data.salim.description}
-        />
-        <Product
-          src={data.hipnosis.src}
-          name={data.hipnosis.name}
-          description={data.hipnosis.description}
-        />
-        <Product
-          src={data.hipnosis.src}
-          name={data.hipnosis.name}
-          description={data.hipnosis.description}
-        />
-      </div>
+      <section className="products_section">
+        <div className="section_heading">
+          <img src="/assets/chevron-left.85606530.svg" alt="breadcrums-arrow" />
+          <h1 className="section_name">Products</h1>
+        </div>
+
+        <div className="products">
+          <Product
+            src={data.hipnosis.src}
+            name={data.hipnosis.name}
+            description={data.hipnosis.description}
+          />
+          <Product
+            src={data.legendborn.src}
+            name={data.legendborn.name}
+            description={data.legendborn.description}
+          />
+          <Product
+            src={data.salim.src}
+            name={data.salim.name}
+            description={data.salim.description}
+          />
+          <Product
+            src={data.hipnosis.src}
+            name={data.hipnosis.name}
+            description={data.hipnosis.description}
+          />
+          <Product
+            src={data.hipnosis.src}
+            name={data.hipnosis.name}
+            description={data.hipnosis.description}
+          />
+        </div>
+      </section>
     </main>
   );
 }

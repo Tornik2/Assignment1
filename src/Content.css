@@ -1,92 +1,88 @@
-
 .content {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 img {
-    height: 160px;
+  height: 160px;
 }
 .book1 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .description {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 .price_description {
-    flex: 0 1 50%;
-    display: flex;
-    flex-direction: column;
-    gap:20px;
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 .buy_btn {
-    padding: 15px 45px;
-    border: none;
-    border-radius: 6px;
-    background-color: rgb(252, 255, 54);
-    flex: 0 1 100%;
-    cursor: pointer;
-    color: rgb(49, 48, 48);
-    font-weight: 700;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 15px 45px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(252, 255, 54);
+  flex: 0 1 100%;
+  cursor: pointer;
+  color: rgb(49, 48, 48);
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 .buy_btn:hover {
-    background-color: rgb(208, 211, 42);
-    color: black;
+  background-color: rgb(208, 211, 42);
+  color: black;
 }
 .buy_btn2 {
-    display: none;
+  display: none;
 }
 
 @media (min-width: 400px) {
-    .content {
-        padding: 20px;
-    }
-
-    }
+  .content {
+    padding: 20px;
+  }
+}
 
 @media (min-width: 500px) {
-    .content {
-        padding: 20px 30px;
-    }
-
+  .content {
+    padding: 20px 30px;
+  }
 }
 
 @media (min-width: 630px) {
-    .content {
-        padding: 20px 35px;
-    }
-    .description {
-        flex-wrap: nowrap;
-    }
-    .buy_btn1 {
-        display: none;
-    }
-    img {
-        height: 250px;
-    }
-    .description {
-        width: 100%;
-    }
-    .price_description {
-        height: 250px;
-        flex: 0 1 auto;
-    }
-    .about_book {
-        min-height: 57px;
-    }
-    .buy_btn2 {
-        display: block;
-        align-self: flex-start;
-        margin-top: 80px;
-    }
+  .content {
+    padding: 20px 35px;
+  }
+  .description {
+    flex-wrap: nowrap;
+  }
+  .buy_btn1 {
+    display: none;
+  }
+  img {
+    height: 250px;
+  }
+  .description {
+    width: 100%;
+  }
+  .price_description {
+    height: 250px;
+    flex: 0 1 auto;
+  }
+  .about_book {
+    min-height: 57px;
+  }
+  .buy_btn2 {
+    display: block;
+    align-self: flex-start;
+    margin-top: 80px;
+  }
 }
 
 @media (min-width: 777px) {
-    
 }

@@ -2,7 +2,7 @@ import "./Footer.css";
 
 export function Footer() {
   return (
-    <div className="footer">
+    <footer className="footer">
       <div className="footer_wrapper">
         <div className="footer_navigation">
           <ul>
@@ -16,6 +16,6 @@ export function Footer() {
           <p className="copyright">2024 All rights reserved</p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

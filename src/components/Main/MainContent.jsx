@@ -24,7 +24,7 @@ const data = {
 
 export function Content() {
   return (
-    <div className="main_content">
+    <main className="main_content">
       <Product
         src={data.hipnosis.src}
         name={data.hipnosis.name}
@@ -40,6 +40,6 @@ export function Content() {
         name={data.salim.name}
         description={data.salim.description}
       />
-    </div>
+    </main>
   );
 }

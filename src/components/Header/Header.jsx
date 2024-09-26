@@ -2,11 +2,11 @@ import "./Header.css";
 
 export function Header() {
   return (
-    <div className="header__wrapper__wrapper">
+    <header className="header__wrapper__wrapper">
       <div className="header_wrapper">
         <div className="logo">LOGO</div>
 
-        <div className="navigation">
+        <nav className="navigation">
           <ul>
             <a href="">
               <li>Home</li>
@@ -18,9 +18,9 @@ export function Header() {
               <li>Contact</li>
             </a>
           </ul>
-        </div>
+        </nav>
         <div className="language_switcher">GEO</div>
       </div>
-    </div>
+    </header>
   );
 }

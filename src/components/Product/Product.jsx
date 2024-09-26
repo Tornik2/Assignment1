@@ -1,6 +1,7 @@
 import "./Product.css";
 
 export function Product(props) {
+  console.log(props);
   return (
     <div className="product_wrapper">
       <div className="product_image_container">

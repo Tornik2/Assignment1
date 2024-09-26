@@ -1,10 +1,11 @@
 .product_wrapper {
-  background-color: aquamarine;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  border: 1px solid rgb(204, 204, 201);
+  height: fit-content;
   transition: 0.3s ease;
 }
 .product_wrapper:hover {
@@ -13,8 +14,11 @@
 .product_wrapper:hover .product_image {
   transform: translateY(-29px);
 }
+.product_wrapper:hover .product_all_info {
+  background-color: transparent;
+}
 .product_image_container {
-  height: 200px;
+  height: 160px;
   position: relative;
   overflow: hidden;
   border-top-left-radius: 10px;
@@ -28,8 +32,7 @@
   transition: 0.3s ease;
 }
 .product_all_info {
-  border: 1px solid rgb(204, 204, 201);
-  border-top: none;
+  background-color: rgb(229, 235, 235);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -41,6 +44,11 @@
     "Lucida Sans", Arial, sans-serif;
   font-size: 28px;
   font-weight: 700;
+  cursor: pointer;
+  width: fit-content;
+}
+.product_name:hover {
+  text-decoration: underline;
 }
 
 .product_description {
@@ -49,4 +57,21 @@
   -webkit-line-clamp: 3;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.add_btn {
+  border: none;
+  color: rgb(37, 34, 4);
+  background-color: rgb(240, 240, 27);
+  padding: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+.add_btn:hover {
+  background-color: rgb(38, 99, 26);
+  color: rgb(248, 248, 248);
 }

@@ -24,22 +24,34 @@ const data = {
 
 export function Content() {
   return (
-    <main className="main_content">
-      <Product
-        src={data.hipnosis.src}
-        name={data.hipnosis.name}
-        description={data.hipnosis.description}
-      />
-      <Product
-        src={data.legendborn.src}
-        name={data.legendborn.name}
-        description={data.legendborn.description}
-      />
-      <Product
-        src={data.salim.src}
-        name={data.salim.name}
-        description={data.salim.description}
-      />
+    <main className="main_content no-scrollbar">
+      <div className="products">
+        <Product
+          src={data.hipnosis.src}
+          name={data.hipnosis.name}
+          description={data.hipnosis.description}
+        />
+        <Product
+          src={data.legendborn.src}
+          name={data.legendborn.name}
+          description={data.legendborn.description}
+        />
+        <Product
+          src={data.salim.src}
+          name={data.salim.name}
+          description={data.salim.description}
+        />
+        <Product
+          src={data.hipnosis.src}
+          name={data.hipnosis.name}
+          description={data.hipnosis.description}
+        />
+        <Product
+          src={data.hipnosis.src}
+          name={data.hipnosis.name}
+          description={data.hipnosis.description}
+        />
+      </div>
     </main>
   );
 }

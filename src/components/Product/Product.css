@@ -19,7 +19,6 @@
 }
 .product_image_container {
   height: 160px;
-  position: relative;
   overflow: hidden;
   border-top-left-radius: 10px;
   cursor: pointer;

@@ -2,8 +2,13 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 15px;
+
+  overflow: scroll;
+}
+.products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: max-content;
   grid-gap: 15px;
 }
 img {

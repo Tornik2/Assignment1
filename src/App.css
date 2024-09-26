@@ -15,3 +15,13 @@
 .main_content {
   flex-grow: 1;
 }
+/* for no-scrollbar */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  /* WebKit browsers */
+  display: none; /* Hide scrollbar */
+}

@@ -1,5 +1,4 @@
 import "./Header.css";
-import "./assets/images.png";
 
 export function Header() {
   return (

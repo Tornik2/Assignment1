@@ -1,5 +1,4 @@
-import "./Content.css";
-import book1 from "./assets/1.png";
+import "./MainContent.css";
 
 export function Content() {
   return (
@@ -7,7 +6,7 @@ export function Content() {
       <div className="book">
         <h2 className="book1">Book 1</h2>
         <div className="description">
-          <img src={book1} alt="" />
+          <img src={"book1"} alt="" />
           <div className="price_description">
             <p className="price">Price - 20$</p>
             <div className="about_book">

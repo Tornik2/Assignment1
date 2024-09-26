@@ -1,9 +1,10 @@
-.content {
+.main_content {
   max-width: 900px;
   margin: 0 auto;
   padding: 15px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
 }
 img {
   height: 160px;
@@ -43,19 +44,19 @@ img {
 }
 
 @media (min-width: 400px) {
-  .content {
+  .main_content {
     padding: 20px;
   }
 }
 
 @media (min-width: 500px) {
-  .content {
+  .main_content {
     padding: 20px 30px;
   }
 }
 
 @media (min-width: 630px) {
-  .content {
+  .main_content {
     padding: 20px 35px;
   }
   .description {

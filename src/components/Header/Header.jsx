@@ -14,9 +14,9 @@ export function Header() {
             <Link to="/about">
               <li>About</li>
             </Link>
-            <a href="">
-              <li>Contact</li>
-            </a>
+            <Link to="/contact">
+              <li>Contact us</li>
+            </Link>
           </ul>
         </nav>
         <div className="language_switcher">GEO</div>

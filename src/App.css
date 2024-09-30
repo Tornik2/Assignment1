@@ -4,6 +4,13 @@
   height: 100vh;
 }
 
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
 .footer {
   flex: 0 0 auto;
 }
@@ -23,6 +30,20 @@
 .contact_page {
   flex-grow: 1;
 }
+
+.section_heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section_heading img {
+  width: 20px;
+  height: 20px;
+}
+.section_name {
+  font-size: 24px;
+}
+
 /* for no-scrollbar */
 .no-scrollbar {
   scrollbar-width: none; /* Firefox */

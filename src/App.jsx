@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import { Assignment1 } from "./components/Assignment1";
 import { Content } from "./components/Main/MainContent";
 import { Layout } from "./components/Layout";
 import { About } from "./components/About/About";
@@ -14,7 +14,7 @@ function App() {
             path="/"
             element={
               <>
-                <Content />
+                <Assignment1 />
               </>
             }
           />

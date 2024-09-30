@@ -1,15 +1,25 @@
 import "./App.css";
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 import { Content } from "./components/Main/MainContent";
+import { Layout } from "./components/Layout";
 
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <Content />
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route
+            path="/"
+            element={
+              <>
+                <Content />
+              </>
+            }
+          />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

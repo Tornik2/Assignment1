@@ -1,5 +1,5 @@
 import "./Header.css";
-
+import { Link } from "react-router-dom";
 export function Header() {
   return (
     <header className="header__wrapper__wrapper">
@@ -8,12 +8,12 @@ export function Header() {
 
         <nav className="navigation">
           <ul>
-            <a href="">
+            <Link to="/">
               <li>Home</li>
-            </a>
-            <a href="">
-              <li>Away</li>
-            </a>
+            </Link>
+            <Link to="/about">
+              <li>About</li>
+            </Link>
             <a href="">
               <li>Contact</li>
             </a>

@@ -8,6 +8,7 @@ export function About() {
         <h1 className="section_name about_section_name">Project Overview</h1>
       </div>
       <div className="about_project_text_wrapper">
+        <p className="about_project_text">React project </p>
         <p className="about_project_text">
           React project is a web designed with a clean layout structure, dynamic
           routing, and reusable components. It uses React Router v6 for routing

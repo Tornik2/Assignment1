@@ -9,7 +9,7 @@ export function About() {
       </div>
       <div className="about_project_text_wrapper">
         <p className="about_project_text">
-          This React project is a web application designed with a clean layout
+          React project is a web application designed with a clean layout
           structure, dynamic routing, and reusable components. It uses React
           Router v6 for routing and demonstrates how to create a layout that
           contains common elements (like a Header and Footer) while dynamically

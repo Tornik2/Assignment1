@@ -13,7 +13,7 @@ export default function Header() {
   }
 
   return (
-    <header>
+    <header className="padding__header__footer">
       <div className="header_wrapper">
         <div className="logo">LOGO</div>
         <div
@@ -26,20 +26,35 @@ export default function Header() {
           <div className="bar-3"></div>
         </div>
 
-        <nav className={`navigation ${isMenuActive && "active"}`}>
-          <ul>
-            <Link href="/">
-              <li>Home</li>
-            </Link>
-            <Link href="/about">
-              <li>About</li>
-            </Link>
-            <Link href="/contact">
-              <li>Contact us</li>
-            </Link>
-          </ul>
-          <div className="language_switcher">GEO</div>
-        </nav>
+        <div className={`right__header ${isMenuActive && "active"}`}>
+          <div className="profile__container padding__header__footer">
+            <h2 className="">PROFILE</h2>
+          </div>
+
+          <nav className={`navigation`}>
+            <ul>
+              <Link
+                onClick={() => setIsMenuActive(false)}
+                className=""
+                href="/"
+              >
+                <li className="nav-list__item main__padding__sides ">Home</li>
+              </Link>
+              <Link
+                onClick={() => setIsMenuActive(false)}
+                className=""
+                href="/about"
+              >
+                <li className="nav-list__item main__padding__sides">About</li>
+              </Link>
+              <Link onClick={() => setIsMenuActive(false)} href="/contact">
+                <li className="main__padding__sides nav-list__item">
+                  Contact us
+                </li>
+              </Link>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
   );

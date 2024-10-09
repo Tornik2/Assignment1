@@ -1,6 +1,5 @@
 header {
   background-color: rgb(230, 226, 226);
-  padding: 15px;
   overflow: hidden;
 }
 
@@ -19,26 +18,28 @@ header {
   cursor: pointer;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  z-index: 200;
 }
-
+.navigation {
+  width: 100%;
+}
 .navigation ul {
   display: flex;
-  gap: 15px;
-}
-
-.burgermenu {
-  font-size: 20px;
-  color: black;
-  width: 20px;
-  height: 20px;
-}
-.navigation ul {
+  flex-direction: column;
   list-style: none;
 }
 
 .navigation li {
   color: rgb(17, 15, 15);
-  font-size: 16px;
+  font-size: 1rem;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.navigation li:hover,
+.navigation li:active {
+  background-color: blue;
+  color: rgb(255, 255, 255);
 }
 
 .language_switcher {
@@ -47,7 +48,7 @@ header {
 
 @media (min-width: 481px) {
   .header {
-    padding: 30px;
+    padding: 15px;
   }
 
   .navigation li {
@@ -60,7 +61,6 @@ header {
 }
 @media (min-width: 481px) {
   .header_wrapper {
-    padding: 20px 30px;
   }
   .navigation ul {
     display: flex;
@@ -74,7 +74,6 @@ header {
 
 @media (min-width: 630px) {
   .header_wrapper {
-    padding: 20px 35px;
   }
   .navigation ul {
     gap: 35px;
@@ -103,7 +102,7 @@ header {
 
 /* nav displaying */
 
-nav {
+.right__header {
   opacity: 0;
   visibility: hidden;
   position: absolute;
@@ -113,11 +112,62 @@ nav {
   width: 100vw;
   background-color: bisque;
   transition: all 0.5s;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 990px) {
+  .right__header {
+    visibility: unset;
+    opacity: 1;
+    position: relative;
+    width: auto;
+    height: auto;
+    background-color: transparent;
+  }
 }
 
-nav.active {
+.right__header.active {
   transform: translate(0);
-  display: block;
   opacity: 1;
   visibility: visible;
+}
+
+/* Profile Avatar */
+
+.profile__container {
+  width: 100px;
+  height: 100px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* Padding for Footer and Header */
+.padding__header__footer {
+  padding: 10px;
+}
+.main__padding__sides {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 481px) {
+  .padding__header__footer {
+    padding: 15px;
+  }
+  .main__padding__sides {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .padding__header__footer {
+    padding: 30px;
+  }
 }

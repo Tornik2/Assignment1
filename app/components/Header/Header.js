@@ -1,13 +1,32 @@
+"use client";
 import "./Header.css";
+import "./hamburger.css";
+
+import { useState } from "react";
 import Link from "next/link";
+// import Link from "next/link";
 
 export default function Header() {
+  const [isMenuActive, setIsMenuActive] = useState("");
+  function toggleMenu() {
+    setIsMenuActive(!isMenuActive);
+  }
+
   return (
-    <header className="header__wrapper__wrapper">
+    <header>
       <div className="header_wrapper">
         <div className="logo">LOGO</div>
+        <div
+          onClick={toggleMenu}
+          className={`header_menu-button ${isMenuActive && "active"}`}
+          id="menuToggle"
+        >
+          <div className="bar-1"></div>
+          <div className="bar-2"></div>
+          <div className="bar-3"></div>
+        </div>
 
-        <nav className="navigation">
+        <nav className={`navigation ${isMenuActive && "active"}`}>
           <ul>
             <Link href="/">
               <li>Home</li>
@@ -19,8 +38,8 @@ export default function Header() {
               <li>Contact us</li>
             </Link>
           </ul>
+          <div className="language_switcher">GEO</div>
         </nav>
-        <div className="language_switcher">GEO</div>
       </div>
     </header>
   );

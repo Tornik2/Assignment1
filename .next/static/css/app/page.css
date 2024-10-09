@@ -1,0 +1,173 @@
+/*!*****************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/maincontent/MainContent.css ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************/
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: max-content;
+  grid-gap: 15px;
+}
+img {
+  height: 160px;
+}
+.book1 {
+  margin-bottom: 20px;
+}
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.price_description {
+  flex: 0 1 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.buy_btn {
+  padding: 15px 45px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(252, 255, 54);
+  flex: 0 1 100%;
+  cursor: pointer;
+  color: rgb(49, 48, 48);
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.buy_btn:hover {
+  background-color: rgb(208, 211, 42);
+  color: black;
+}
+.buy_btn2 {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .main {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 500px) {
+  .main {
+    padding: 20px 30px;
+  }
+}
+
+@media (min-width: 630px) {
+  .main {
+    padding: 20px 35px;
+  }
+  .description {
+    flex-wrap: nowrap;
+  }
+  .buy_btn1 {
+    display: none;
+  }
+  img {
+    height: 250px;
+  }
+  .description {
+    width: 100%;
+  }
+  .price_description {
+    height: 250px;
+    flex: 0 1 auto;
+  }
+  .about_book {
+    min-height: 57px;
+  }
+  .buy_btn2 {
+    display: block;
+    align-self: flex-start;
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 777px) {
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/components/product/Product.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.product_wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: 1px solid rgb(204, 204, 201);
+  height: -moz-fit-content;
+  height: fit-content;
+  transition: 0.3s ease;
+}
+.product_wrapper:hover {
+  box-shadow: 2px 2px 5px rgba(2, 2, 2, 0.2);
+}
+.product_wrapper:hover .product_image {
+  transform: translateY(-29px);
+}
+.product_wrapper:hover .product_all_info {
+  background-color: transparent;
+}
+.product_image_container {
+  height: 160px;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+}
+.product_image {
+  width: 100%;
+  height: 120%;
+  object-fit: cover;
+  object-position: top;
+  transition: 0.3s ease;
+}
+.product_all_info {
+  background-color: rgb(229, 235, 235);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product_name {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.product_name:hover {
+  text-decoration: underline;
+}
+
+.product_description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.add_btn {
+  border: none;
+  color: rgb(37, 34, 4);
+  background-color: rgb(240, 240, 27);
+  padding: 15px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 18px;
+  border-radius: 6px;
+  transition: 0.2s ease-out;
+  cursor: pointer;
+}
+
+.add_btn:hover {
+  background-color: rgb(38, 99, 26);
+  color: rgb(248, 248, 248);
+}
+

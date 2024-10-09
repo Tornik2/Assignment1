@@ -1,6 +1,6 @@
 import "./About.css";
-import "../Main/MainContent.css";
-export function About() {
+// import "../page/MainContent.css";
+export default function About() {
   return (
     <main className="about_page">
       <div className="section_heading">

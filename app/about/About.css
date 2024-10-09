@@ -1,0 +1,32 @@
+.about_project_text_wrapper {
+  background-color: rgb(229, 235, 235);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid rgb(204, 204, 201);
+}
+.about_project_text_wrapper:hover {
+  background-color: transparent;
+  box-shadow: 2px 2px 5px rgba(2, 2, 2, 0.2);
+}
+.about_project_text {
+  font-size: 20px;
+}
+
+.about_features {
+  margin: 15px 0 0;
+}
+.about_features_heading {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+.about_features_ul {
+  list-style: disc;
+  padding: 15px;
+}
+
+.features_list_item {
+  font-size: 20px;
+  font-weight: lighter;
+}

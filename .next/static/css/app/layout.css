@@ -1,0 +1,193 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/components/Header/Header.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+.header__wrapper__wrapper {
+  background-color: rgb(230, 226, 226);
+}
+
+.header_wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 18px;
+  color: rgba(14, 4, 107, 0.993);
+  cursor: pointer;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.navigation ul {
+  display: flex;
+  gap: 15px;
+}
+
+.burgermenu {
+  font-size: 20px;
+  color: black;
+  width: 20px;
+  height: 20px;
+}
+.navigation ul {
+  list-style: none;
+}
+
+.navigation li {
+  color: rgb(17, 15, 15);
+  font-size: 16px;
+}
+
+.language_switcher {
+  display: none;
+}
+
+@media (min-width: 400px) {
+  .header_wrapper {
+    padding: 20px;
+  }
+
+  .navigation li {
+    font-size: 18px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+}
+@media (min-width: 500px) {
+  .header_wrapper {
+    padding: 20px 30px;
+  }
+  .navigation ul {
+    display: flex;
+    gap: 30px;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 630px) {
+  .header_wrapper {
+    padding: 20px 35px;
+  }
+  .navigation ul {
+    gap: 35px;
+  }
+  .navigation li {
+    font-size: 20px;
+  }
+
+  .language_switcher {
+    display: block;
+    cursor: pointer;
+  }
+  .language_switcher:hover {
+    color: brown;
+  }
+}
+
+@media (min-width: 777px) {
+  .navigation ul {
+    gap: 40px;
+  }
+  .navigation li {
+    font-size: 20px;
+  }
+}
+
+/*!*********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/App.css ***!
+  \*********************************************************************************************************************************************************************************************************************************************************/
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.header__wrapper__wrapper {
+  flex: 0 0 auto;
+}
+
+.main_content {
+  flex-grow: 1;
+}
+
+.about_page {
+  flex-grow: 1;
+}
+
+.contact_page {
+  flex-grow: 1;
+}
+
+.section_heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section_heading img {
+  width: 20px;
+  height: 20px;
+}
+.section_name {
+  font-size: 24px;
+}
+
+/* for no-scrollbar */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  /* WebKit browsers */
+  display: none; /* Hide scrollbar */
+}
+
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[14].oneOf[12].use[3]!./app/index.css ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+body {
+  min-width: 290px;
+  margin: 0;
+  padding: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  opacity: 0.7;
+}
+

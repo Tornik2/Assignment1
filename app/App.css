@@ -1,0 +1,56 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+  overflow: auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.header__wrapper__wrapper {
+  flex: 0 0 auto;
+}
+
+.main_content {
+  flex-grow: 1;
+}
+
+.about_page {
+  flex-grow: 1;
+}
+
+.contact_page {
+  flex-grow: 1;
+}
+
+.section_heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.section_heading img {
+  width: 20px;
+  height: 20px;
+}
+.section_name {
+  font-size: 24px;
+}
+
+/* for no-scrollbar */
+.no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  /* WebKit browsers */
+  display: none; /* Hide scrollbar */
+}

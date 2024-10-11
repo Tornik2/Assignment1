@@ -1,6 +1,10 @@
 header {
   background-color: rgb(230, 226, 226);
   overflow: hidden;
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
+}
+header:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .header_wrapper {

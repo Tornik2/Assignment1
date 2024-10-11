@@ -24,12 +24,12 @@ function Blogs() {
   }, []);
 
   return (
-    <div className="main-blogs" id="main__blogs">
+    <div className="main-blogs max-width padding__top__bottom" id="main__blogs">
       <section className="section-blogs">
-        <p className="section-intro">
-          Welcome to the OmniShop Blog! Discover tips, trends, and insights on
-          everything from food to fashion, home decor, and more.
-        </p>
+        <div className="section_heading">
+          <img src="/assets/chevron-left.85606530.svg" alt="breadcrums-arrow" />
+          <h1 className="section_name">Blogs</h1>
+        </div>
         <ul className="blogs">
           {blogList.map((blog) => (
             <li className="blog" key={blog.id}>

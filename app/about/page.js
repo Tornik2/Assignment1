@@ -2,7 +2,7 @@ import "./About.css";
 // import "../page/MainContent.css";
 export default function About() {
   return (
-    <main className="about_page">
+    <div className="about_page max-width padding__top__bottom">
       <div className="section_heading">
         <img src="/assets/chevron-left.85606530.svg" alt="breadcrums-arrow" />
         <h1 className="section_name about_section_name">Project Overview</h1>
@@ -25,6 +25,6 @@ export default function About() {
           <li className="features_list_item">Component-Based Architecture</li>
         </ul>
       </div>
-    </main>
+    </div>
   );
 }

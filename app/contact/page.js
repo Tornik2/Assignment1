@@ -2,7 +2,7 @@ import "./Contact.css";
 
 export default function Contact() {
   return (
-    <main className="contact_page no-scrollbar">
+    <div className="contact_page max-width ">
       <div className="contact_left">
         <div className="section_heading">
           <h1 className="section_name">Contact us</h1>
@@ -86,6 +86,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 }

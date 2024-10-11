@@ -3,10 +3,13 @@
   flex-direction: column;
   height: 100vh;
 }
+.max-width {
+  max-width: 900px;
+  margin: 0 auto;
+}
 
 main {
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
   overflow: auto;
   flex-grow: 1;
@@ -57,9 +60,12 @@ header {
 }
 
 /* Padding for Footer and Header */
-.padding__header__footer,
-.padding__top__bottom {
+.padding__header__footer {
   padding: 10px;
+}
+.padding__top__bottom {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .main__padding__sides {
   padding-left: 10px;
@@ -67,9 +73,12 @@ header {
 }
 
 @media (min-width: 481px) {
-  .padding__header__footer,
-  .padding__top__bottom {
+  .padding__header__footer {
     padding: 15px;
+  }
+  .padding__top__bottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
   .main__padding__sides {
     padding-left: 15px;
@@ -77,9 +86,12 @@ header {
   }
 }
 @media (min-width: 768px) {
-  .padding__header__footer,
-  .padding__top__bottom {
+  .padding__header__footer {
     padding: 25px;
+  }
+  .padding__top__bottom {
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   .main__padding__sides {
     padding-left: 25px;

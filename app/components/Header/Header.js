@@ -52,6 +52,9 @@ export default function Header() {
                   Products
                 </li>
               </Link>
+              <Link onClick={() => setIsMenuActive(false)} href="/blogs">
+                <li className="main__padding__sides nav-list__item">Blogs</li>
+              </Link>
             </ul>
           </nav>
         </div>

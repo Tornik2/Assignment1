@@ -3,6 +3,7 @@ import "./Product.css";
 
 export function Product({ productObj }) {
   const { src, name, description, id } = productObj;
+  const shortName = name.split(" ").slice(0, 2).join(" ");
   console.log(productObj.src);
   return (
     <li className="product_wrapper">
@@ -10,7 +11,7 @@ export function Product({ productObj }) {
         <img src={src} alt="" className="product_image" />
       </div>
       <div className="product_all_info">
-        <h2 className="product_name">{name}</h2>
+        <h2 className="product_name">{shortName}</h2>
         <p className="product_description">{description}</p>
         <Link
           style={{ textAlign: "center" }}

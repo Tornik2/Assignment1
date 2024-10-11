@@ -13,7 +13,9 @@ export default function Layout({ children }) {
       <body>
         <div className="app">
           <Header />
-          <main className="no-scrollbar">{children}</main>
+          <div className="main__padding__sides">
+            <main className="no-scrollbar">{children}</main>
+          </div>
           <Footer />
         </div>
       </body>

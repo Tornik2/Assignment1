@@ -1,0 +1,15 @@
+.product__wrapper {
+  max-width: 120rem;
+  margin: 0 auto;
+  flex: 1;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.product__img--big {
+  object-fit: contain;
+  width: 300px;
+}

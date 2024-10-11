@@ -2,7 +2,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer className="footer">
+    <footer className="padding__header__footer">
       <div className="footer_wrapper">
         <div className="footer_navigation">
           <ul>

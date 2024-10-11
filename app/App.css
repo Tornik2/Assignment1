@@ -54,3 +54,27 @@ main {
   /* WebKit browsers */
   display: none; /* Hide scrollbar */
 }
+
+/* Padding for Footer and Header */
+.padding__header__footer {
+  padding: 10px;
+}
+.main__padding__sides {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 481px) {
+  .padding__header__footer {
+    padding: 15px;
+  }
+  .main__padding__sides {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+@media (min-width: 768px) {
+  .padding__header__footer {
+    padding: 25px;
+  }
+}

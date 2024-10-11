@@ -5,10 +5,11 @@
 }
 
 main {
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  padding: 15px;
   overflow: auto;
+  flex-grow: 1;
 }
 
 .footer {

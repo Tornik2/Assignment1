@@ -47,9 +47,9 @@ export default function Header() {
               >
                 <li className="nav-list__item main__padding__sides">About</li>
               </Link>
-              <Link onClick={() => setIsMenuActive(false)} href="/contact">
+              <Link onClick={() => setIsMenuActive(false)} href="/products">
                 <li className="main__padding__sides nav-list__item">
-                  Contact us
+                  Products
                 </li>
               </Link>
             </ul>

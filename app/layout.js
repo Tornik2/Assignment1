@@ -1,4 +1,5 @@
-import Header from "./components/Header/Header"; // Import your Header component
+import Header from "./components/Header/Header"; // Import  Header component
+import Footer from "./components/Footer/Footer"; // Import  Footer component
 import "./App.css";
 import "./index.css";
 export const metadata = {
@@ -10,8 +11,11 @@ export default function Layout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Header />
-        <div>{children}</div>
+        <div className="app">
+          <Header />
+          <main className="no-scrollbar">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

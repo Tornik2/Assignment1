@@ -64,8 +64,6 @@ header:hover {
   }
 }
 @media (min-width: 481px) {
-  .header_wrapper {
-  }
   .navigation ul {
     display: flex;
     gap: 30px;
@@ -77,8 +75,6 @@ header:hover {
 }
 
 @media (min-width: 630px) {
-  .header_wrapper {
-  }
   .navigation ul {
     gap: 35px;
   }

@@ -38,7 +38,7 @@ export default function Products() {
 
   return (
     <>
-      <div className="products__page__wrapper">
+      <div style={{ paddingTop: "15px" }} className="products__page__wrapper">
         <div className="section_heading">
           <img src="/assets/chevron-left.85606530.svg" alt="breadcrums-arrow" />
           <h1 className="section_name">Products</h1>

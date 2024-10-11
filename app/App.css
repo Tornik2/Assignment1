@@ -57,7 +57,8 @@ header {
 }
 
 /* Padding for Footer and Header */
-.padding__header__footer {
+.padding__header__footer,
+.padding__top__bottom {
   padding: 10px;
 }
 .main__padding__sides {
@@ -66,7 +67,8 @@ header {
 }
 
 @media (min-width: 481px) {
-  .padding__header__footer {
+  .padding__header__footer,
+  .padding__top__bottom {
     padding: 15px;
   }
   .main__padding__sides {
@@ -75,7 +77,12 @@ header {
   }
 }
 @media (min-width: 768px) {
-  .padding__header__footer {
+  .padding__header__footer,
+  .padding__top__bottom {
     padding: 25px;
+  }
+  .main__padding__sides {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }

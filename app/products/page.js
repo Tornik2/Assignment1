@@ -1,29 +1,20 @@
-"use client";
 import { Product } from "../components/product/page";
 import "./products.css";
-import { useState, useEffect } from "react";
 
-export default function Products() {
-  const [products, setProducts] = useState([]);
+export default async function Products() {
+  let products = [];
 
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch("https://dummyjson.com/products");
+  try {
+    const res = await fetch("https://dummyjson.com/products");
 
-        if (!res.ok)
-          throw new Error("Somthing went wrong with fetching Products");
+    if (!res.ok) throw new Error("Somthing went wrong with fetching Products");
 
-        const data = await res.json();
-        if (data.Response === "False") throw new Error("Products not found!");
-        setProducts(data.products);
-        console.log(data.products[0]);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchProducts();
-  }, []);
+    const data = await res.json();
+    if (data.Response === "False") throw new Error("Products not found!");
+    products = data.products;
+  } catch (error) {
+    console.log(error);
+  }
 
   const productList = products.map((product) => {
     const { title, description, id, images } = product;

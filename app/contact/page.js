@@ -1,6 +1,23 @@
+"use client";
 import "./Contact.css";
+import { useState } from "react";
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    topic: "",
+    message: "",
+  });
+  const handleInputChange = (e) => {
+    setFormData((prev) => {
+      return {
+        ...prev,
+        [e.target.name]: e.target.value,
+      };
+    });
+    console.log(formData.name, e.target.value);
+  };
   return (
     <div className="contact_page max-width ">
       <div className="contact_left">
@@ -16,7 +33,8 @@ export default function Contact() {
               name="name"
               className="form_input"
               placeholder="Enter your name"
-              value={""}
+              onChange={handleInputChange}
+              value={formData.name}
               required
             />
           </div>
@@ -29,14 +47,22 @@ export default function Contact() {
               name="email"
               className="form_input"
               placeholder="Enter your email"
-              value={""}
+              value={formData.email}
+              onChange={handleInputChange}
               required
             />
           </div>
 
           <div className="form_group">
             <label htmlFor="topic">Select a Topic:</label>
-            <select id="topic" name="topic" className="form_select" required>
+            <select
+              id="topic"
+              name="topic"
+              className="form_select"
+              value={formData.topic}
+              onChange={handleInputChange}
+              required
+            >
               <option value="">Choose a topic...</option>
               <option value="support">Support</option>
               <option value="sales">Sales</option>
@@ -52,6 +78,8 @@ export default function Contact() {
               name="message"
               className="form_textarea"
               placeholder="Enter your message"
+              onChange={handleInputChange}
+              value={formData.message}
               required
             />
           </div>

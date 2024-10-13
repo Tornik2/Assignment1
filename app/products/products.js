@@ -2,10 +2,13 @@
 import { Product } from "../components/product/page";
 import "./products.css";
 import { useState } from "react";
+import { useSearchParams } from "next/navigation";
 
 export default function ProductsDetails({ fetchedProducts }) {
+  const searchParams = useSearchParams();
+  console.log(searchParams.get("category"));
   const [products, setProducts] = useState(fetchedProducts);
-  console.log(products);
+
   const productList = products.map((product) => {
     const { title, description, id, images } = product;
     const productObj = {

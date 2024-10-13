@@ -4,7 +4,6 @@ import "./Product.css";
 export function Product({ productObj }) {
   const { src, name, description, id } = productObj;
   const shortName = name.split(" ").slice(0, 2).join(" ");
-  console.log(productObj.src);
   return (
     <li className="product_wrapper">
       <div className="product_image_container">

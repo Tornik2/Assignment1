@@ -17,7 +17,7 @@ export async function fetchProducts() {
 
 export function filter(arr, data) {
   let filteredProducts = arr;
-  console.log(arr.map((i) => i.rating));
+  const searchWord = data.searchWord;
   const category = data.category;
   const rating = data.rating;
   const minPrice = data.minPrice ? data.minPrice : 0;
@@ -26,6 +26,12 @@ export function filter(arr, data) {
   filteredProducts = arr.filter((item) => {
     return item.price > minPrice && item.price < maxPrice;
   });
+  //filter by searchWord
+  if (searchWord) {
+    filteredProducts = filteredProducts.filter((item) => {
+      return item.title.toLowerCase().includes(searchWord.toLowerCase());
+    });
+  }
   //filter by category
   if (category) {
     filteredProducts = filteredProducts.filter(

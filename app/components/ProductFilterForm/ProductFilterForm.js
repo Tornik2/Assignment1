@@ -1,6 +1,17 @@
 export default function ProductFilterForm({ formData, handleInputChange }) {
   return (
     <form>
+      <div className="search__wrapper">
+        <label htmlFor="search">Search</label>
+        <input
+          type="text"
+          name="searchWord"
+          id="search"
+          placeholder="...Search"
+          value={formData.searchWord}
+          onChange={handleInputChange}
+        />
+      </div>
       <div>
         <label htmlFor="category">Select a category:</label>
         <select

@@ -14,3 +14,15 @@ export async function fetchProducts() {
   }
   return products;
 }
+
+export function filter(arr, data) {
+  let filteredProducts = arr;
+  const category = data.category;
+  if (category) {
+    filteredProducts = arr.filter((item) => {
+      return item.category === category;
+    });
+  }
+
+  return filteredProducts;
+}

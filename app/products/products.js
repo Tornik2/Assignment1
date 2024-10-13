@@ -1,13 +1,25 @@
 "use client";
 import { Product } from "../components/product/page";
 import "./products.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams } from "next/navigation";
+import ProductFilterForm from "../components/ProductFilterForm/ProductFilterForm";
+import { filter } from "./utils";
 
 export default function ProductsDetails({ fetchedProducts }) {
-  const searchParams = useSearchParams();
-  console.log(searchParams.get("category"));
   const [products, setProducts] = useState(fetchedProducts);
+  const [formData, setFormData] = useState({
+    category: "",
+  });
+  const handleInputChange = (e) => {
+    setFormData((prev) => {
+      return { ...prev, [e.target.name]: e.target.value };
+    });
+  };
+  useEffect(() => {
+    const filteredProductes = filter(fetchedProducts, formData);
+    setProducts(filteredProductes);
+  }, [formData]);
 
   const productList = products.map((product) => {
     const { title, description, id, images } = product;
@@ -27,6 +39,10 @@ export default function ProductsDetails({ fetchedProducts }) {
           <img src="/assets/chevron-left.85606530.svg" alt="breadcrums-arrow" />
           <h1 className="section_name">Products</h1>
         </div>
+        <ProductFilterForm
+          formData={formData}
+          handleInputChange={handleInputChange}
+        />
         <ul className="products__list">{productList}</ul>
       </div>
     </>

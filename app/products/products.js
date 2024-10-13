@@ -2,7 +2,6 @@
 import { Product } from "../components/product/page";
 import "./products.css";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import ProductFilterForm from "../components/ProductFilterForm/ProductFilterForm";
 import { filter } from "./utils";
 
@@ -10,6 +9,8 @@ export default function ProductsDetails({ fetchedProducts }) {
   const [products, setProducts] = useState(fetchedProducts);
   const [formData, setFormData] = useState({
     category: "",
+    minPrice: "",
+    maxPrice: "",
   });
   const handleInputChange = (e) => {
     setFormData((prev) => {

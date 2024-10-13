@@ -18,8 +18,13 @@ export async function fetchProducts() {
 export function filter(arr, data) {
   let filteredProducts = arr;
   const category = data.category;
+  const minPrice = data.minPrice ? data.minPrice : 0;
+  const maxPrice = data.maxPrice ? data.maxPrice : 2000;
+  filteredProducts = arr.filter((item) => {
+    return item.price > minPrice && item.price < maxPrice;
+  });
   if (category) {
-    filteredProducts = arr.filter((item) => {
+    filteredProducts = filteredProducts.filter((item) => {
       return item.category === category;
     });
   }

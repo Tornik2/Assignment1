@@ -17,6 +17,22 @@ export default function ProductFilterForm({ formData, handleInputChange }) {
           <option value={"beauty"}>beauty</option>
         </select>
       </div>
+      <div>
+        <label htmlFor="minPrice">Price</label>
+        <input
+          type="text"
+          name="minPrice"
+          value={formData.minPrice}
+          onChange={handleInputChange}
+        />
+        {" to "}
+        <input
+          type="text"
+          name="maxPrice"
+          value={formData.maxPrice}
+          onChange={handleInputChange}
+        />
+      </div>
       <div className="btn-wrapper">
         <button type="submit">filter</button>
       </div>

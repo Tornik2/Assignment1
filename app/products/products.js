@@ -13,6 +13,7 @@ export default function ProductsDetails({ fetchedProducts }) {
     maxPrice: "",
     rating: "",
     searchWord: "",
+    sortMethod: "",
   });
   const handleInputChange = (e) => {
     setFormData((prev) => {

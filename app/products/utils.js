@@ -18,6 +18,7 @@ export async function fetchProducts() {
 export function filter(arr, data) {
   let filteredProducts = arr;
   const searchWord = data.searchWord;
+  const sortWord = data.sortMethod;
   const category = data.category;
   const rating = data.rating;
   const minPrice = data.minPrice ? data.minPrice : 0;
@@ -44,6 +45,21 @@ export function filter(arr, data) {
       (item) => parseFloat(item.rating) > parseFloat(rating)
     );
   }
+  //sort products if any sort method given
+  console.log(sortWord);
+  if (sortWord) sortProducts(sortWord, filteredProducts);
 
   return filteredProducts;
+}
+
+export function sortProducts(sortWord, arr) {
+  sortWord === "title A-Z"
+    ? arr.sort((a, b) => a.title.localeCompare(b.title))
+    : sortWord === "title Z-A"
+    ? arr.sort((a, b) => b.title.localeCompare(a.title))
+    : sortWord === "price (lowest first)"
+    ? arr.sort((a, b) => a.price - b.price)
+    : sortWord === "price (lowest first)"
+    ? arr.sort((a, b) => b.price - a.price)
+    : arr;
 }

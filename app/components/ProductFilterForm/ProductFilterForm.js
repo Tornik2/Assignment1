@@ -65,6 +65,21 @@ export default function ProductFilterForm({ formData, handleInputChange }) {
           <option value={"4.0"}>{"4.0 >"}</option>
         </select>
       </div>
+      <div>
+        <label htmlFor="sortMethod">Sort By:</label>
+        <select
+          name="sortMethod"
+          id="sortMethod"
+          defaultValue={formData.sortMethod}
+          onChange={handleInputChange}
+        >
+          <option value={""}>Sort by</option>
+          <option value={"title A-Z"}>title A-Z</option>
+          <option value={"title Z-A"}>title Z-A</option>
+          <option value={"price (lowest first)"}>price (lowest first)</option>
+          <option value={"price (highest first)"}>price (highest first)</option>
+        </select>
+      </div>
       <div className="btn-wrapper">
         <button type="submit">filter</button>
       </div>

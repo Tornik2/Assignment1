@@ -18,17 +18,23 @@ export default function ProductFilterForm({ formData, handleInputChange }) {
         </select>
       </div>
       <div>
-        <label htmlFor="minPrice">Price</label>
+        <label htmlFor="minPrice">Min Price</label>
         <input
-          type="text"
+          type="number"
           name="minPrice"
+          id="minPrice"
+          placeholder="min"
           value={formData.minPrice}
           onChange={handleInputChange}
         />
         {" to "}
+        <label htmlFor="maxPrice">Max Price</label>
+
         <input
-          type="text"
+          type="number"
           name="maxPrice"
+          id="maxPrice"
+          placeholder="max"
           value={formData.maxPrice}
           onChange={handleInputChange}
         />

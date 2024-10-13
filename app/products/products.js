@@ -11,6 +11,7 @@ export default function ProductsDetails({ fetchedProducts }) {
     category: "",
     minPrice: "",
     maxPrice: "",
+    rating: "",
   });
   const handleInputChange = (e) => {
     setFormData((prev) => {

@@ -1,40 +1,19 @@
-"use client";
-
-import { useState, useEffect } from "react";
 import "./blogs.css";
-
-export default function BlogDetailsClient({ params }) {
-  const { blogId } = params;
-  const [blog, setBlog] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    async function fetchBlogPost() {
-      try {
-        const res = await fetch(`https://dummyjson.com/posts/${blogId}`);
-        if (!res.ok) {
-          throw new Error(`HTTP error! status: ${res.status}`);
-        }
-        const data = await res.json();
-        setBlog(data);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setIsLoading(false);
-      }
+async function fetchBlogPost(blogId) {
+  try {
+    const res = await fetch(`https://dummyjson.com/posts/${blogId}`);
+    if (!res.ok) {
+      throw new Error(`HTTP error! status: ${res.status}`);
     }
-
-    fetchBlogPost();
-  }, [blogId]);
-
-  if (isLoading) {
-    return <div className="loading">Loading...</div>;
+    const data = await res.json();
+    return data;
+  } catch (err) {
+    console.log(err.message);
   }
-
-  if (error) {
-    return <div className="error">Error: {error}</div>;
-  }
+}
+export default async function BlogDetailsClient({ params }) {
+  const { blogId } = params;
+  const blog = await fetchBlogPost(blogId);
 
   if (!blog) {
     return <div className="error">No blog post found.</div>;

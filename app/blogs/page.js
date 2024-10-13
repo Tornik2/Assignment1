@@ -1,27 +1,18 @@
-"use client";
-
-import { useEffect, useState } from "react";
 import "./blogs.css";
 
 const url = "https://dummyjson.com/posts";
+async function fetchBlogs() {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.posts;
+  } catch (error) {
+    console.log(error);
+  }
+}
 
-function Blogs() {
-  const [blogList, setBlogList] = useState([]);
-
-  useEffect(() => {
-    async function fetchBlogs() {
-      try {
-        const response = await fetch(url);
-        const data = await response.json();
-        setBlogList(data.posts);
-      } catch (error) {
-        console.log(error);
-        setBlogList([]);
-      }
-    }
-
-    fetchBlogs();
-  }, []);
+export default async function Blogs() {
+  const blogs = await fetchBlogs();
 
   return (
     <div className="main-blogs max-width padding__top__bottom" id="main__blogs">
@@ -31,7 +22,7 @@ function Blogs() {
           <h1 className="section_name">Blogs</h1>
         </div>
         <ul className="blogs">
-          {blogList.map((blog) => (
+          {blogs.map((blog) => (
             <li className="blog" key={blog.id}>
               <h4 className="blog__title">{blog.title}</h4>
               <p className="blog__desc">{blog.body}</p>
@@ -58,5 +49,3 @@ function Blogs() {
     </div>
   );
 }
-
-export default Blogs;

@@ -23,7 +23,7 @@ export default function ProductsDetails({ fetchedProducts }) {
   useEffect(() => {
     const filteredProductes = filter(fetchedProducts, formData);
     setProducts(filteredProductes);
-  }, [formData]);
+  }, [formData, fetchedProducts]);
 
   const productList = products.map((product) => {
     const { title, description, id, images } = product;

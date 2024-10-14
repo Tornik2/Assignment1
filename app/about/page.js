@@ -1,5 +1,4 @@
 import "./About.css";
-// import "../page/MainContent.css";
 export default function About() {
   return (
     <div className="about_page max-width padding__top__bottom">

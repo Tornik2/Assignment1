@@ -35,7 +35,7 @@ export default function ProductFilterForm({ formData, handleInputChange }) {
         {/* Options group for Category, Rating, and Sort By */}
         <div className="options-group">
           <div className="form-group">
-            <label htmlFor="category">Select a category:</label>
+            <label htmlFor="category">Category:</label>
             <select
               className="input select-input"
               name="category"

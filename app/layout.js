@@ -11,7 +11,7 @@ export default function Layout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="app">
+        <div className="app no-scrollbar">
           <Header />
           <main className="no-scrollbar main__padding__sides">{children}</main>
           <Footer />

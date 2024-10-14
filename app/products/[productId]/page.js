@@ -23,7 +23,7 @@ export default async function Product({ params }) {
 
   return (
     <>
-      <div className="product__wrapper">
+      <div className="product__wrapper max-width">
         <div>
           {product && product.images && (
             <img

@@ -1,15 +1,32 @@
-.product__wrapper {
-  max-width: 120rem;
-  margin: 0 auto;
-  flex: 1;
+/* product.css */
 
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
-  justify-items: center;
+.product__wrapper {
+  margin: 2rem auto; /* Center the container with margin */
+  display: flex; /* Use flexbox for layout */
+  gap: 2rem; /* Space between image and details */
+  padding: 1rem; /* Padding inside the wrapper */
+  background-color: #f8f9fa; /* Light background for the product page */
+  border-radius: 8px; /* Rounded corners for the wrapper */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .product__img--big {
-  object-fit: contain;
-  width: 300px;
+  width: 100%; /* Make the image responsive */
+  max-width: 400px; /* Maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners for the image */
+}
+
+.product__details {
+  flex: 1; /* Allow details to take remaining space */
+  display: flex; /* Use flexbox for details layout */
+  flex-direction: column; /* Column layout for details */
+  justify-content: center; /* Center content vertically */
+}
+
+.heading-tertiary {
+  font-size: 2rem; /* Title size */
+  font-weight: bold; /* Bold title */
+  margin: 0 0 1rem 0; /* Space below title */
+  color: #343a40; /* Darker */
 }

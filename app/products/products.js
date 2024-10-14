@@ -1,5 +1,5 @@
 "use client";
-import { Product } from "../components/product/page";
+import { Product } from "../components/Product/Product";
 import "./products.css";
 import { useEffect, useState } from "react";
 import ProductFilterForm from "../components/ProductFilterForm/ProductFilterForm";

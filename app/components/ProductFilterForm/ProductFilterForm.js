@@ -1,5 +1,23 @@
+"use client";
+import { useState, useEffect } from "react";
 import "./ProductFilterForm.css";
+
 export default function ProductFilterForm({ formData, handleInputChange }) {
+  const [debouncedSearchWord, setDebouncedSearchWord] = useState(
+    formData.searchWord
+  );
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      handleInputChange({
+        target: { name: "searchWord", value: debouncedSearchWord },
+      });
+    }, 300);
+    return () => clearTimeout(handler); // Cleanup function
+  }, [debouncedSearchWord, handleInputChange]);
+
+  const handleChange = (e) => {
+    setDebouncedSearchWord(e.target.value);
+  };
   return (
     <>
       <div className="form-group search__wrapper">
@@ -9,8 +27,8 @@ export default function ProductFilterForm({ formData, handleInputChange }) {
           name="searchWord"
           id="search"
           placeholder="...Search"
-          value={formData.searchWord}
-          onChange={handleInputChange}
+          value={debouncedSearchWord}
+          onChange={handleChange}
         />
       </div>
       <form className="filter-form">

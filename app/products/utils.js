@@ -46,7 +46,6 @@ export function filter(arr, data) {
     );
   }
   //sort products if any sort method given
-  console.log(sortWord);
   if (sortWord) sortProducts(sortWord, filteredProducts);
 
   return filteredProducts;
@@ -59,7 +58,7 @@ export function sortProducts(sortWord, arr) {
     ? arr.sort((a, b) => b.title.localeCompare(a.title))
     : sortWord === "price (lowest first)"
     ? arr.sort((a, b) => a.price - b.price)
-    : sortWord === "price (lowest first)"
+    : sortWord === "price (highest first)"
     ? arr.sort((a, b) => b.price - a.price)
     : arr;
 }

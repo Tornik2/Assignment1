@@ -1,7 +1,7 @@
 import Link from "next/link";
 import "./Product.css";
 
-export function Product({ productObj }) {
+export default function Product({ productObj }) {
   const { src, name, description, id } = productObj;
   const shortName = name.split(" ").slice(0, 2).join(" ");
   return (

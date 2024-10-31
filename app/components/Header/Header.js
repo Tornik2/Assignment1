@@ -1,12 +1,13 @@
 "use client";
 import "./Header.css";
 import "./hamburger.css";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 
 import { useState } from "react";
 import Link from "next/link";
 // import Link from "next/link";
 
-export default function Header() {
+export default withPageAuthRequired(function Header() {
   const [isMenuActive, setIsMenuActive] = useState("");
   function toggleMenu() {
     setIsMenuActive(!isMenuActive);
@@ -28,7 +29,7 @@ export default function Header() {
 
         <div className={`right__header ${isMenuActive && "active"}`}>
           <div className="profile__container padding__header__footer">
-            <div style={{ width: "370px" }}>
+            <div style={{ width: "max-content" }}>
               <a href="/api/auth/login">Login</a> /
               <a href="/api/auth/logout">Log out</a>
             </div>
@@ -64,4 +65,4 @@ export default function Header() {
       </div>
     </header>
   );
-}
+});

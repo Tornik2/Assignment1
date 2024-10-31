@@ -9,6 +9,7 @@ import Link from "next/link";
 // import Link from "next/link";
 
 export default function Header() {
+  // eslint-disable-next-line no-unused-vars
   const { user, error, isLoading } = useUser();
   console.log("user:", user?.email);
   const [isMenuActive, setIsMenuActive] = useState("");

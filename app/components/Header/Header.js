@@ -28,7 +28,10 @@ export default function Header() {
 
         <div className={`right__header ${isMenuActive && "active"}`}>
           <div className="profile__container padding__header__footer">
-            <h2 className="">PROFILE</h2>
+            <div style={{ width: "370px" }}>
+              <a href="/api/auth/login">Login</a> /
+              <a href="/api/auth/logout">Log out</a>
+            </div>
           </div>
 
           <nav className={`navigation`}>

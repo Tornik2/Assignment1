@@ -1,4 +1,6 @@
 "use client";
+import { useUser } from "@auth0/nextjs-auth0/client";
+
 import "./Header.css";
 import "./hamburger.css";
 
@@ -7,6 +9,9 @@ import Link from "next/link";
 // import Link from "next/link";
 
 export default function Header() {
+  // eslint-disable-next-line no-unused-vars
+  const { user, error, isLoading } = useUser();
+  console.log("user:", user?.email);
   const [isMenuActive, setIsMenuActive] = useState("");
   function toggleMenu() {
     setIsMenuActive(!isMenuActive);
@@ -28,9 +33,9 @@ export default function Header() {
 
         <div className={`right__header ${isMenuActive && "active"}`}>
           <div className="profile__container padding__header__footer">
-            <div style={{ width: "370px" }}>
-              <a href="/api/auth/login">Login</a> /
-              <a href="/api/auth/logout">Log out</a>
+            <div style={{ width: "max-content" }}>
+              {user ? "Profile" : <a href="/api/auth/login">Login</a>}
+              {/* <a href="/api/auth/logout">Log out</a> */}
             </div>
           </div>
 

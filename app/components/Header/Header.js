@@ -1,13 +1,12 @@
 "use client";
 import "./Header.css";
 import "./hamburger.css";
-import { withPageAuthRequired } from "@auth0/nextjs-auth0/client";
 
 import { useState } from "react";
 import Link from "next/link";
 // import Link from "next/link";
 
-export default withPageAuthRequired(function Header() {
+export default function Header() {
   const [isMenuActive, setIsMenuActive] = useState("");
   function toggleMenu() {
     setIsMenuActive(!isMenuActive);
@@ -65,4 +64,4 @@ export default withPageAuthRequired(function Header() {
       </div>
     </header>
   );
-});
+}

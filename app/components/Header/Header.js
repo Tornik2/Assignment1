@@ -59,6 +59,15 @@ export default function Header() {
                 </a>
               )}
             </div>
+            <div>
+              <p className="text-xs translate-x-4">mode</p>
+              <button
+                onClick={toggleDarkMode}
+                className={`h-7 w-7 ${
+                  darkMode ? "bg-blue-200" : "bg-black"
+                } cursor-pointer ml-4`}
+              ></button>
+            </div>
           </div>
 
           <nav className={`navigation `}>
@@ -110,10 +119,6 @@ export default function Header() {
             </ul>
           </nav>
         </div>
-        <button
-          onClick={toggleDarkMode}
-          className="h-5 w-5 bg-red-800 z-auto absolute top-52 cursor-pointer"
-        ></button>
       </div>
     </header>
   );

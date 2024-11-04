@@ -4,7 +4,6 @@ export default function UserInfo({
   username,
   email,
   picture,
-  // eslint-disable-next-line no-unused-vars
   isEmailVerified,
 }) {
   return (

@@ -20,7 +20,7 @@ export default function ProductFilterForm({ formData, handleInputChange }) {
   };
   return (
     <>
-      <div className="form-group search__wrapper">
+      <div className="form-group search__wrapper dark:text-darkGray">
         <input
           className="input search-input"
           type="text"
@@ -31,7 +31,7 @@ export default function ProductFilterForm({ formData, handleInputChange }) {
           onChange={handleChange}
         />
       </div>
-      <form className="filter-form">
+      <form className="filter-form dark:text-darkGray">
         {/* Options group for Category, Rating, and Sort By */}
         <div className="options-group">
           <div className="form-group">

@@ -6,10 +6,10 @@ export default function Product({ productObj }) {
   const shortName = name.split(" ").slice(0, 2).join(" ");
   return (
     <li className="product_wrapper">
-      <div className="product_image_container">
+      <div className="product_image_container dark:bg-slate-400">
         <img src={src} alt="" className="product_image" />
       </div>
-      <div className="product_all_info">
+      <div className="product_all_info dark:text-darkGray">
         <h2 className="product_name">{shortName}</h2>
         <p className="product_description">{description}</p>
         <Link

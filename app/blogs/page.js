@@ -24,7 +24,7 @@ async function Blogs() {
         </div>
         <ul className="blogs">
           {blogs.map((blog) => (
-            <li className="blog" key={blog.id}>
+            <li className="blog dark:text-darkGray" key={blog.id}>
               <h4 className="blog__title">{blog.title}</h4>
               <p className="blog__desc">{blog.body}</p>
               <div className="blog__tags">

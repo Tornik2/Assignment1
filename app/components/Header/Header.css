@@ -1,6 +1,5 @@
 header {
   background-color: rgb(230, 226, 226);
-  overflow: hidden;
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
 }
 header:hover {
@@ -26,11 +25,14 @@ header:hover {
 }
 .navigation {
   width: 100%;
+  display: flex;
+  flex-grow: 1;
 }
 .navigation ul {
   display: flex;
   flex-direction: column;
   list-style: none;
+  flex-grow: 1;
 }
 
 .navigation li {
@@ -128,6 +130,15 @@ header:hover {
 }
 
 /* Profile Avatar */
+.logout__btn__mobile,
+.login__btn__mobile {
+  display: block;
+  margin-top: auto;
+}
+.profile__nav__desktop,
+.login__btn__desktop {
+  display: none;
+}
 
 .profile__container {
   width: 100px;
@@ -153,5 +164,48 @@ header:hover {
     padding: 0;
     margin: 0;
     border-radius: unset;
+    position: relative;
+  }
+  .logout__btn__mobile,
+  .login__btn__mobile {
+    display: none;
+  }
+  .profile__container::before {
+    content: "";
+    width: 100%;
+    height: 8px;
+    position: absolute;
+    top: 100%;
+  }
+  .profile__container:hover .profile__nav__desktop {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: -15px; /* to line up nicely and be even with li padding */
+    width: max-content;
+    background-color: #fff;
+    list-style: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* slight  shadow */
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .profile__container:hover .profile__nav__desktop li {
+    padding: 10px 15px;
+    width: 100%;
+  }
+  .profile__container:hover .profile__nav__desktop li:hover {
+    background-color: blue;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+  .logout__btn__desktop {
+    color: #dd3b3b;
+    font-weight: 600;
+  }
+  .login__btn__desktop {
+    display: block;
+    color: #1c6b30;
+    font-weight: 600;
   }
 }

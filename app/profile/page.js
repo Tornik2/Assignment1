@@ -1,21 +1,21 @@
 import "./profile.css";
+import UserInfo from "./UserInfo";
+import { withPageAuthRequired, getSession } from "@auth0/nextjs-auth0";
 
-const ProfilePage = () => {
-  const user = {
-    name: "Toko",
-    email: "toko@example.com",
-    profilePic: "",
-  };
+async function ProfilePage() {
+  const { user } = await getSession();
+  const { nickname, email, isEmailVerified, picture } = user;
 
   return (
-    <div className="container">
-      <div className="profileCard">
-        <img src="profilePic" alt="Profile Picture" className="profilePic" />
-        <h1 className="styles">{user.name}</h1>
-        <p className="email">{user.email}</p>
-      </div>
+    <div className="max-width">
+      <UserInfo
+        username={nickname}
+        email={email}
+        picture={picture}
+        isEmailVerified={isEmailVerified}
+      />
     </div>
   );
-};
+}
 
-export default ProfilePage;
+export default withPageAuthRequired(ProfilePage, { returnTo: "/profile" });

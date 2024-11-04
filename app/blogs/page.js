@@ -1,4 +1,5 @@
 import "./blogs.css";
+import { withPageAuthRequired } from "@auth0/nextjs-auth0";
 
 const url = "https://dummyjson.com/posts";
 async function fetchBlogs() {
@@ -11,7 +12,7 @@ async function fetchBlogs() {
   }
 }
 
-export default async function Blogs() {
+async function Blogs() {
   const blogs = await fetchBlogs();
 
   return (
@@ -49,3 +50,6 @@ export default async function Blogs() {
     </div>
   );
 }
+
+// export as a protected route
+export default withPageAuthRequired(Blogs, { returnTo: "/blogs" });

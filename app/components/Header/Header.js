@@ -9,7 +9,6 @@ import Link from "next/link";
 // import Link from "next/link";
 
 export default function Header() {
-  // eslint-disable-next-line no-unused-vars
   const { user, isLoading } = useUser();
   console.log(isLoading ? "loading" : user);
   const [isMenuActive, setIsMenuActive] = useState("");
@@ -20,7 +19,9 @@ export default function Header() {
   return (
     <header className="padding__header__footer">
       <div className="header_wrapper">
-        <div className="logo">LOGO</div>
+        <Link href={"/"}>
+          <div className="logo">LOGO</div>
+        </Link>
         <div
           onClick={toggleMenu}
           className={`header_menu-button ${isMenuActive && "active"}`}
@@ -38,7 +39,9 @@ export default function Header() {
                 " "
               ) : !isLoading && user ? (
                 <div className="nav__profile">
-                  <p>PROFILE</p>
+                  <div className="user__image" style={{ cursor: "pointer" }}>
+                    <img src={user?.picture} />
+                  </div>
                   <ul className="profile__nav__desktop">
                     <li>My Orders</li>
                     <li>History</li>
@@ -68,9 +71,11 @@ export default function Header() {
               <Link
                 onClick={() => setIsMenuActive(false)}
                 className=""
-                href="/about"
+                href="/profile"
               >
-                <li className="nav-list__item main__padding__sides">About</li>
+                <li className="nav-list__item main__padding__sides ">
+                  Profile
+                </li>
               </Link>
               <Link onClick={() => setIsMenuActive(false)} href="/products">
                 <li className="main__padding__sides nav-list__item">
@@ -79,6 +84,13 @@ export default function Header() {
               </Link>
               <Link onClick={() => setIsMenuActive(false)} href="/blogs">
                 <li className="main__padding__sides nav-list__item">Blogs</li>
+              </Link>
+              <Link
+                onClick={() => setIsMenuActive(false)}
+                className=""
+                href="/about"
+              >
+                <li className="nav-list__item main__padding__sides">About</li>
               </Link>
               {user ? (
                 <a className="logout__btn__mobile" href="/api/auth/logout">

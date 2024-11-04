@@ -8,13 +8,14 @@ export default function UserInfo({
   isEmailVerified,
 }) {
   return (
-    <div>
+    <div className="border-4 mt-5 flex gap-7">
       <div>
-        <img className="w-52" src={picture} alt="user avatar" />
+        <img className="w-72" src={picture} alt="user avatar" />
       </div>
-      <div className="">
-        <h1 className="">{username}</h1>
-        <p>{email}</p>
+      <div className="flex flex-col gap-7 mt-auto mb-auto">
+        <h1 className="">Nickname : {`   ${username}`}</h1>
+        <p> Email : {`   ${email}`}</p>
+        <p className="">Email is {!isEmailVerified && "NOT"} verified</p>
       </div>
     </div>
   );

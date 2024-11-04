@@ -208,4 +208,12 @@ header:hover {
     color: #1c6b30;
     font-weight: 600;
   }
+  .user__image {
+    width: 30px;
+    height: 30px;
+  }
+  .user__image img {
+    width: 100%;
+    display: block;
+  }
 }

@@ -18,7 +18,7 @@ export default function Layout({ children }) {
           <body>
             <div className="app no-scrollbar">
               <Header />
-              <main className="no-scrollbar main__padding__sides">
+              <main className="no-scrollbar main__padding__sides dark:text-gray-100 dark:bg-gray-600">
                 {children}
               </main>
               <Footer />

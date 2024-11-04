@@ -1,5 +1,6 @@
 "use client";
 import { useUser } from "@auth0/nextjs-auth0/client";
+import { useTheme } from "../ThemeProvider";
 
 import "./Header.css";
 import "./hamburger.css";
@@ -9,18 +10,19 @@ import Link from "next/link";
 // import Link from "next/link";
 
 export default function Header() {
-  const { user, isLoading } = useUser();
-  console.log(isLoading ? "loading" : user);
+  const { user, isLoading } = useUser(); // get user info from auth)
+  const { darkMode, toggleDarkMode } = useTheme(); // get theme info from theme Provider
+  console.log(darkMode);
   const [isMenuActive, setIsMenuActive] = useState("");
   function toggleMenu() {
     setIsMenuActive(!isMenuActive);
   }
 
   return (
-    <header className="padding__header__footer">
-      <div className="header_wrapper">
+    <header className="padding__header__footer dark:bg-gray-900 dark:text-gray-200">
+      <div className="header_wrapper ">
         <Link href={"/"}>
-          <div className="logo">LOGO</div>
+          <div className="logo dark:text-gray-200">LOGO</div>
         </Link>
         <div
           onClick={toggleMenu}
@@ -42,7 +44,7 @@ export default function Header() {
                   <div className="user__image" style={{ cursor: "pointer" }}>
                     <img src={user?.picture} />
                   </div>
-                  <ul className="profile__nav__desktop">
+                  <ul className="profile__nav__desktop dark:text-darkGray">
                     <li>My Orders</li>
                     <li>History</li>
                     <li>Account Settings</li>
@@ -59,7 +61,7 @@ export default function Header() {
             </div>
           </div>
 
-          <nav className={`navigation`}>
+          <nav className={`navigation `}>
             <ul>
               <Link
                 onClick={() => setIsMenuActive(false)}
@@ -108,6 +110,10 @@ export default function Header() {
             </ul>
           </nav>
         </div>
+        <button
+          onClick={toggleDarkMode}
+          className="h-5 w-5 bg-red-800 z-auto absolute top-52 cursor-pointer"
+        ></button>
       </div>
     </header>
   );

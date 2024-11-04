@@ -7,7 +7,11 @@ export default {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        darkGray: "rgb(17, 15, 15)",
+      },
+    },
   },
   plugins: [],
 };

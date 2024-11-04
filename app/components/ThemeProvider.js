@@ -32,8 +32,10 @@ export function ThemeProvider({ children }) {
   // Toggle mode and save in local storage
   const toggleDarkMode = () => {
     setDarkMode((prev) => {
+      console.log(prev);
       const newMode = !prev;
       localStorage.setItem("darkMode", newMode);
+      console.log(darkMode);
       return newMode;
     });
   };

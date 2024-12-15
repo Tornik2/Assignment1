@@ -1,17 +1,19 @@
-export async function fetchProducts() {
+import { supabase } from "../../utils/supabase/server";
+export async function fetchProducts(language = "en") {
   let products = [];
-
-  try {
-    const res = await fetch("https://dummyjson.com/products");
-
-    if (!res.ok) throw new Error("Somthing went wrong with fetching Products");
-
-    const data = await res.json();
-    if (data.Response === "False") throw new Error("Products not found!");
-    products = data.products;
-  } catch (error) {
-    console.log(error);
+  const { data, error } = await supabase
+    .from(language === "en" ? "products" : "products_translations")
+    .select(language === "en" ? "*" : "*, products(price, rating, images)");
+  if (error) {
+    console.error("Error fetching products:", error);
+    return [];
   }
+  products = data.map((prod) => {
+    let images = prod.products.images;
+    let rating = prod.products.rating;
+    let price = prod.products.price;
+    return { ...prod, images, price, rating };
+  });
   return products;
 }
 

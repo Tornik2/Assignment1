@@ -1,25 +1,19 @@
 import "./product.css";
+import { supabase } from "../../../utils/supabase/server";
 
-const fetchProduct = async (productId) => {
-  try {
-    const response = await fetch(`https://dummyjson.com/products/${productId}`);
-    if (!response.ok) {
-      throw new Error("Something went wrong with fetching Products");
-    }
-    const data = await response.json();
-
-    if (data.Response === "False") {
-      throw new Error("Products not found!");
-    }
-
-    return data;
-  } catch (err) {
-    console.log(err.message);
-  }
-};
 export default async function Product({ params }) {
   const { productId } = params;
-  const product = await fetchProduct(productId);
+  const { data, error } = await supabase
+    .from("products")
+    .select("*")
+    .eq("id", productId);
+
+  if (error) {
+    console.log("error: ", error);
+    return;
+  }
+
+  const product = data[0];
 
   return (
     <>
